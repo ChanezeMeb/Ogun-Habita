@@ -72,8 +72,10 @@ form?.addEventListener('submit', async (e) => {
       });
       if (!res.ok) throw new Error(res.status);
     }
-    form.querySelectorAll('fieldset, .consent, button[type="submit"]').forEach(el => el.hidden = true);
-    document.getElementById('form-success').hidden = false;
+    const success = document.getElementById('form-success');
+    [...form.children].forEach(el => { el.hidden = el !== success; });
+    success.hidden = false;
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
   } catch {
     button.disabled = false;
     button.textContent = 'Envoyer ma demande';
