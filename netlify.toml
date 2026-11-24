@@ -1,0 +1,3 @@
+# Netlify publie uniquement le dossier site/ (la brochure reste hors ligne)
+[build]
+  publish = "site"

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>OGUN HABITA — Présentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --navy: #083c51; --navy-deep: #052a39; --green: #2f7d63;
+    --green-light: #e7f0ec; --sand: #f6f3ec; --ink: #1b2a30; --muted: #586a70; --line: #dde3e0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: "Manrope", sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.5; }
+  .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  h1, h2, h3 { color: var(--navy); margin: 0; line-height: 1.15; }
+  p { margin: 0; }
+  .pad { padding: 0 16mm; }
+
+  /* RECTO */
+  .cover { background: var(--navy); color: #d6e3e6; padding: 14mm 16mm 13mm; }
+  .brand { display: flex; align-items: center; gap: 4mm; }
+  .brand img { width: 16mm; height: 16mm; border-radius: 50%; }
+  .brand strong { color: #fff; font-size: 13pt; letter-spacing: .04em; display: block; }
+  .brand span { font-size: 8.5pt; }
+  .cover h1 { color: #fff; font-size: 34pt; font-weight: 800; letter-spacing: -.02em; margin: 14mm 0 5mm; }
+  .cover .lead { font-size: 11.5pt; max-width: 150mm; color: #d6e3e6; }
+
+  .section { margin-top: 10mm; }
+  .section h2 { font-size: 15pt; font-weight: 800; margin-bottom: 5mm; }
+  .services { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; }
+  .service { background: var(--sand); border-radius: 2.5mm; padding: 4.5mm 4.5mm 5mm; }
+  .service h3 { font-size: 10.5pt; margin-bottom: 1.5mm; }
+  .service p { color: var(--muted); font-size: 9pt; }
+
+  .adapt { background: var(--green-light); border-radius: 3mm; padding: 7mm 8mm; display: grid; grid-template-columns: 1.15fr 1fr; gap: 8mm; }
+  .adapt h2 { margin-bottom: 3mm; }
+  .adapt p + p { margin-top: 2.5mm; }
+  .adapt ul { list-style: none; margin: 0; padding: 0; }
+  .adapt li { padding: 1.6mm 0 1.6mm 6mm; position: relative; font-size: 9.5pt; }
+  .adapt li::before { content: ""; position: absolute; left: 0; top: 3.1mm; width: 2.6mm; height: 2.6mm; border-radius: 50%; background: var(--green); }
+
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 6mm 16mm; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); font-size: 9pt; color: var(--muted); }
+  .foot strong { color: var(--navy); font-size: 12pt; }
+
+  /* VERSO */
+  .verso-top { padding-top: 18mm; }
+  .verso-mid { margin-top: 16mm; }
+  .steps { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm 10mm; }
+  .step { display: grid; grid-template-columns: 10mm 1fr; gap: 4mm; align-items: start; }
+  .num { width: 10mm; height: 10mm; border-radius: 50%; background: var(--navy); color: #fff; font-weight: 800; text-align: center; line-height: 10mm; font-size: 11pt; }
+  .step h3 { font-size: 12pt; margin: 1.8mm 0 1.5mm; }
+  .step p { color: var(--muted); font-size: 10pt; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+  .who div { margin-bottom: 5mm; }
+  .who h3 { font-size: 11pt; margin-bottom: 1mm; }
+  .who p { color: var(--muted); font-size: 10pt; }
+  .prep { background: var(--sand); border-radius: 3mm; padding: 8mm 8mm; }
+  .prep h2 { font-size: 13pt; margin-bottom: 3mm; }
+  .prep ul { margin: 0; padding-left: 4.5mm; font-size: 10.5pt; }
+  .prep li { margin-bottom: 2.5mm; }
+
+  .contact { position: absolute; left: 0; right: 0; bottom: 0; background: var(--navy); color: #d6e3e6; padding: 11mm 16mm 9mm; }
+  .contact h2 { color: #fff; font-size: 20pt; font-weight: 800; margin-bottom: 6mm; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr 30mm; gap: 8mm; align-items: start; }
+  .contact .label { font-size: 8pt; text-transform: uppercase; letter-spacing: .08em; color: #8fb1b9; margin-bottom: 1mm; }
+  .contact .big { color: #fff; font-size: 15pt; font-weight: 800; }
+  .contact .med { color: #fff; font-size: 11pt; font-weight: 700; }
+  .contact .block + .block { margin-top: 4mm; }
+  .qr { width: 30mm; height: 30mm; background: #fff; border-radius: 2mm; text-align: center; color: var(--muted); font-size: 7pt; padding: 8mm 2mm 0; }
+  .qr img { width: 100%; height: 100%; }
+  .qr-cap { font-size: 7.5pt; text-align: center; margin-top: 1.5mm; }
+  .legal { margin-top: 8mm; padding-top: 4mm; border-top: 1px solid rgba(255,255,255,.15); font-size: 7.5pt; color: #8fb1b9; }
+</style>
+</head>
+<body>
+
+<!-- ===== RECTO ===== -->
+<section class="page">
+  <div class="cover">
+    <div class="brand">
+      <img src="../site/assets/logo-ogun-habita.jpg" alt="">
+      <div><strong>OGUN HABITA</strong><span>Maçonnerie · Rénovation · Adaptation — Martinique</span></div>
+    </div>
+    <h1>Des lieux qui<br>facilitent la vie.</h1>
+    <p class="lead">Basée à Rivière-Salée, OGUN HABITA rénove et aménage les logements&nbsp;: salle d'eau, accès, sols, murs. Chaque projet part d'une visite sur place et aboutit à un devis détaillé.</p>
+  </div>
+
+  <div class="pad section">
+    <h2>Nos travaux</h2>
+    <div class="services">
+      <div class="service"><h3>Maçonnerie</h3><p>Création et reprise d'ouvrages, seuils, murets, dalles et abords.</p></div>
+      <div class="service"><h3>Salle d'eau</h3><p>Rénovation complète ou partielle, douche de plain-pied à la place d'une baignoire.</p></div>
+      <div class="service"><h3>Rampes et accès</h3><p>Rampes maçonnées, allées et cheminements jusqu'à l'entrée, mains courantes.</p></div>
+      <div class="service"><h3>Carrelage</h3><p>Préparation des supports, pose sol et mur, joints et finitions.</p></div>
+      <div class="service"><h3>Peinture</h3><p>Murs et plafonds intérieurs, préparation des supports, protection des lieux.</p></div>
+      <div class="service"><h3>Plomberie</h3><p>Remplacement d'équipements sanitaires et de robinetterie, raccordements.</p></div>
+    </div>
+  </div>
+
+  <div class="pad section">
+    <div class="adapt">
+      <div>
+        <h2>Adapter le logement aux besoins de chacun</h2>
+        <p>Avec l'âge, après un accident ou en situation de handicap, certains gestes deviennent difficiles&nbsp;: entrer dans la douche, franchir une marche, se relever.</p>
+        <p>Nous cherchons avec la personne et ses proches les aménagements qui changent vraiment le quotidien, en lien avec l'ergothérapeute s'il y en a un.</p>
+      </div>
+      <ul>
+        <li><strong>Douche de plain-pied</strong> à la place d'une baignoire</li>
+        <li><strong>Barres d'appui</strong> et siège de douche</li>
+        <li><strong>Sols antidérapants</strong> dans les pièces humides</li>
+        <li><strong>Suppression des seuils</strong> et ressauts</li>
+        <li><strong>Rampe d'accès</strong> avec main courante</li>
+        <li><strong>Élargissement de passage</strong> après étude</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Devis détaillé après visite · Martinique</span>
+    <strong>0696 92 68 52</strong>
+  </div>
+</section>
+
+<!-- ===== VERSO ===== -->
+<section class="page">
+  <div class="pad verso-top">
+    <h2 style="font-size:17pt;font-weight:800;margin-bottom:9mm">Comment ça se passe</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>Premier échange</h3><p>Vous décrivez votre projet par téléphone, par e-mail ou sur notre site. Nous convenons d'une visite.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Visite et devis</h3><p>Nous relevons les dimensions et l'état des lieux, puis vous remettons un devis détaillé&nbsp;: travaux, matériaux, options, délais.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Chantier</h3><p>Nous fixons ensemble le calendrier et l'organisation, en tenant compte des occupants s'ils restent sur place.</p></div></div>
+      <div class="step"><div class="num">4</div><div><h3>Réception</h3><p>Nous faisons le tour des travaux avec vous et notons les éventuelles réserves avant de clôturer.</p></div></div>
+    </div>
+  </div>
+
+  <div class="pad verso-mid two">
+    <div class="who">
+      <h2 style="font-size:14pt;margin-bottom:5mm">Nous travaillons avec</h2>
+      <div><h3>Les particuliers</h3><p>Propriétaires ou locataires qui veulent rénover ou adapter leur logement.</p></div>
+      <div><h3>Les gestionnaires et syndics</h3><p>Remise en état de logements, travaux entre deux locations.</p></div>
+      <div><h3>Les professionnels de l'accompagnement</h3><p>Ergothérapeutes, services d'aide à domicile, associations, collectivités.</p></div>
+    </div>
+    <div class="prep">
+      <h2>Pour préparer la visite</h2>
+      <ul>
+        <li>Quelques photos des lieux</li>
+        <li>Les dimensions si vous les connaissez</li>
+        <li>Ce que vous voulez garder et changer</li>
+        <li>L'accès&nbsp;: étage, escaliers, stationnement</li>
+        <li>Vos disponibilités et la présence d'occupants pendant les travaux</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h2>Parlons de votre projet.</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="block"><div class="label">Téléphone</div><div class="big">0696 92 68 52</div></div>
+        <div class="block"><div class="label">E-mail</div><div class="med">ogunhabita@gmail.com</div></div>
+      </div>
+      <div>
+        <div class="block"><div class="label">Adresse</div><div class="med">24 rue Devassoigne<br>97215 Rivière-Salée</div></div>
+        <div class="block"><div class="label">Interlocuteur</div><div class="med">Karim Paul Deloy, gérant</div></div>
+      </div>
+      <div>
+        <div class="qr"><!--QR-->QR code<br>du site<br>(à venir)</div>
+        <div class="qr-cap">Demande de devis en ligne</div>
+      </div>
+    </div>
+    <div class="legal">OGUN HABITA — SARL au capital de 100 € · RCS Fort-de-France 131 283 608 · 24 rue Devassoigne, 97215 Rivière-Salée</div>
+  </div>
+</section>
+
+</body>
+</html>
