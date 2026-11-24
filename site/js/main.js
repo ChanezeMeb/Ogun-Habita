@@ -35,10 +35,10 @@ function validate() {
   const email = form.querySelector('#email');
   const telOk = tel.value.replace(/\D/g, '').length >= 10;
   const emailOk = email.value.trim() !== '' && email.checkValidity();
-  const contactOk = telOk || emailOk;
-  tel.classList.toggle('invalid', !contactOk);
-  email.classList.toggle('invalid', !contactOk);
-  showError('contact', !contactOk); ok &&= contactOk;
+  tel.classList.toggle('invalid', !telOk);
+  showError('tel', !telOk); ok &&= telOk;
+  email.classList.toggle('invalid', !emailOk);
+  showError('email', !emailOk); ok &&= emailOk;
 
   const consent = form.querySelector('input[name="consentement"]').checked;
   showError('consentement', !consent); ok &&= consent;

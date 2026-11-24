@@ -272,18 +272,18 @@
               <input id="structure" name="structure" type="text" autocomplete="organization">
             </div>
           </div>
-          <p class="field-group-label">Téléphone ou e-mail <em>*</em> <span class="opt">— au moins l'un des deux</span></p>
           <div class="row">
             <div class="field">
-              <label for="tel">Téléphone</label>
-              <input id="tel" name="telephone" type="tel" autocomplete="tel" placeholder="0696 …">
+              <label for="tel">Téléphone <em>*</em></label>
+              <input id="tel" name="telephone" type="tel" autocomplete="tel" placeholder="0696 …" required>
+              <p class="error" data-for="tel">Indiquez un numéro de téléphone valide.</p>
             </div>
             <div class="field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email">
+              <label for="email">E-mail <em>*</em></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <p class="error" data-for="email">Indiquez une adresse e-mail valide.</p>
             </div>
           </div>
-          <p class="error" data-for="contact">Indiquez au moins un téléphone ou un e-mail valide.</p>
 
           <div class="field">
             <span class="label">Vous préférez être contacté par</span>

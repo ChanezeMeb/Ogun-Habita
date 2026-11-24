@@ -140,8 +140,7 @@ legend { font-weight: 800; font-size: 1.2rem; color: var(--navy); margin-bottom:
 .field em { color: var(--green); font-style: normal; }
 .opt { font-weight: 400; color: var(--muted); }
 .required-hint { font-size: .9rem; color: var(--muted); margin-bottom: 20px; }
-.required-hint em, .field-group-label em { color: var(--green); font-style: normal; font-weight: 700; }
-.field-group-label { font-weight: 700; font-size: .95rem; margin: 0 0 10px; }
+.required-hint em { color: var(--green); font-style: normal; font-weight: 700; }
 input[type=text], input[type=tel], input[type=email], select, textarea {
   width: 100%; font: inherit; font-size: 1rem;
   padding: 12px 14px; border: 1px solid #cfd6d2; border-radius: 8px; background: var(--white); color: var(--ink);
